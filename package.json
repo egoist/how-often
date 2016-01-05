@@ -1,0 +1,23 @@
+{
+  "name": "how-often",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "tooling": {
+    "index": {
+      "title": "how often?"
+    }
+  },
+  "devDependencies": {
+    "redux": "^3.0.5",
+    "redux-actions": "^0.9.0",
+    "redux-promise": "^0.5.0",
+    "revue": "^1.2.5",
+    "vue-resource": "^0.6.0"
+  }
+}

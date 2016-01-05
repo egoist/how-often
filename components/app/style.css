@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font: 14px/1.4 "Helvetica Neue", arial, serif;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+
+.app {
+  .section-a {
+    background-color: #f9f9f9;
+    height: 50vmin;
+    text-align: center;
+  }
+  .sitename {
+    padding: 100px 0;
+    font-size: 3rem;
+    a {
+      color: #2c97e8;
+      text-decoration: none;
+    }
+  }
+}

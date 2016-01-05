@@ -1,0 +1,20 @@
+<style src="./style"></style>
+
+<template>
+  <div class="app">
+    <section class="section-a">
+      <h1 class="sitename">
+        <a href="/">How often do you create a repo on GitHub?</a>
+      </h1>
+      <input-box></input-box>
+    </section>
+  </div>
+</template>
+
+<script>
+  export default {
+    components: {
+      inputBox: require('../inputBox')
+    }
+  }
+</script>
