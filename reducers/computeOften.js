@@ -23,7 +23,8 @@ export default handleActions({
         return {
           username: user.login,
           often,
-          found: true
+          found: true,
+          repos: user.public_repos
         }
       }
       return state
