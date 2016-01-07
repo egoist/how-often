@@ -2,6 +2,7 @@
 
 <template>
   <div class="app">
+    <corner></corner>
     <section class="section-a">
       <h1 class="sitename">
         <a href="/">How often do you create a repo on GitHub?</a>
@@ -18,7 +19,8 @@
   export default {
     components: {
       inputBox: require('../inputBox'),
-      computeOften: require('../computeOften')
+      computeOften: require('../computeOften'),
+      corner: require('./corner')
     }
   }
 </script>
