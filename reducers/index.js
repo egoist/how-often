@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import computedOften from './computedOften'
+import computeOften from './computeOften'
+import loadStatus from './loadStatus'
 
 export default combineReducers({
-  computedOften
+  computeOften,
+  loadStatus
 })

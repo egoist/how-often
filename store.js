@@ -1,9 +1,20 @@
-import { createStore, applyMiddleware } from 'redux'
-import reducer from './reducers/index'
-import promiseMiddleware from 'redux-promise'
+import { applyMiddleware, createStore, compose } from 'redux'
+import rootReducer from './reducers'
+import thunk from 'redux-thunk'
 
-const createStoreWithMiddleware = applyMiddleware(
-  promiseMiddleware
+const finalCreateStore = applyMiddleware(
+    thunk
 )(createStore)
+const store = finalCreateStore(rootReducer)
 
-export default createStoreWithMiddleware(reducer)
+function configureStore () {
+  if (module.hot) {
+    module.hot.accept('./reducers', () => {
+      const nextRootReducer = require('./reducers').default
+      store.replaceReducer(nextRootReducer)
+    })
+  }
+  return store
+}
+
+export default configureStore()

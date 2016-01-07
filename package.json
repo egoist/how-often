@@ -4,20 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run clean && tooling watch -e index",
+    "build": "npm run clean && tooling build -e index",
+    "clean": "rm -rf ./build",
+    "release": "npm run build && surge -d often.surge.sh -p ./build"
   },
   "author": "",
   "license": "ISC",
   "tooling": {
     "index": {
-      "title": "how often?"
+      "title": "how often?",
+      "template": "index.html"
     }
   },
   "devDependencies": {
     "redux": "^3.0.5",
     "redux-actions": "^0.9.0",
     "redux-promise": "^0.5.0",
-    "revue": "^1.2.5",
-    "vue-resource": "^0.6.0"
+    "redux-thunk": "^1.0.3",
+    "revue": "^1.2.5"
   }
 }

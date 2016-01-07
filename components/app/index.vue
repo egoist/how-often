@@ -8,13 +8,17 @@
       </h1>
       <input-box></input-box>
     </section>
+    <section class="section-b">
+      <compute-often></compute-often>
+    </section>
   </div>
 </template>
 
 <script>
   export default {
     components: {
-      inputBox: require('../inputBox')
+      inputBox: require('../inputBox'),
+      computeOften: require('../computeOften')
     }
   }
 </script>

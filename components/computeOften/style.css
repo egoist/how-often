@@ -1,0 +1,9 @@
+@import '../../css/vars.css';
+
+.compute-often {
+  font-size: 3rem;
+  padding-top: 50px;
+  a {
+    color: $linkColor;
+  }
+}
